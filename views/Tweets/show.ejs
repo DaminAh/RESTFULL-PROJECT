@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Tweet ID: <%= id %> </h2>
+  <div><h3><b>Tweet Content: <%= tweetContent %></b></div></h2>
+    <h3>Tweet was made by: <i><%=name %></i> </h3>
+    <button><a href='/tweets'>HOME</a></button>
+    <form method="POST" action="/tweets/<%= id %>?_method=DELETE" >
+      <button>Delete</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>All tweets</title>
+</head>
+
+<body>
+  <h1>Welcome to Tweet Page</h1>
+  <h3>We hope you have fun reading all these tweets</h3>
+  <hr>
+  <h3>Press here to make new tweet &RightArrow;&RightArrow;&RightArrow; <button><a href="/tweets/new">New
+        Tweet</a></button></h3>
+  <% for(let x of Tweet){ %>
+  <h3><%= x.tweetContent%> -----<i><%= x.name %> </i></h3>
+  <p>Comment ID: <%= x.id %> </p>
+  <a href='/tweets/<%= x.id %> '>DETAILS</a>
+  <a href='/tweets/<%= x.id %>/edit '>EDIT</a>
+
+  <% } %>
+</body>
+
+</html>
